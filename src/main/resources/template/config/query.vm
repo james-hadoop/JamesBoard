@@ -1,0 +1,23 @@
+#foreach($param in $params)
+<div class="form-group">
+    <label class="col-sm-2 control-label">$param.get("label")</label>
+    <div class="col-sm-10">
+    #if ($param.get("type") == "input")
+        <input ng-model="curWidget.query.$param.get("name")" class="form-control"/>
+    #elseif ($param.type == "textarea")
+        <div ui-ace="{
+            useWrapMode : false,
+            mode: 'sql',
+            advanced: {
+                autoScrollEditorIntoView: true
+            },
+            rendererOptions:{
+              fontSize: '14px',
+                minLines: 10,
+                maxLines: 100
+            }
+        }" ng-model="curWidget.query.$param.get("name")" class="form-control" ></div>
+    #end
+    </div>
+</div>
+#end

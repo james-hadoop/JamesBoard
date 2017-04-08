@@ -1,0 +1,150 @@
+<!-- Content Wrapper. Contains page content -->
+<div id="inner-container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <i class="fa fa-cubes"></i> <h3 class="box-title"> {{'CONFIG.DATASET.DATASET'|translate}}</h3>
+                    <div class="box-tools pull-right">
+                        <i class="glyphicon glyphicon-plus toolbar-icon" ng-click="newDs()" title="{{'COMMON.NEW'|translate}}"></i>&nbsp;&nbsp;
+                        <i class="fa fa-copy toolbar-icon" ng-click="copyNode()" title="{{'COMMON.COPY'|translate}}"></i>&nbsp;&nbsp;
+                        <i class="fa fa-edit toolbar-icon" ng-click="editNode()" title="{{'COMMON.EDIT'|translate}}"></i>&nbsp;&nbsp;
+                        <i class="fa fa-trash-o toolbar-icon"  ng-click="deleteNode()" title="{{'COMMON.DELETE'|translate}}"></i>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <input type="text" class="form-control" placeholder="Search" ng-model="keywords" ng-change="searchNode()">
+                </div>
+                <div class="panel-body">
+                    <div id="dataSetTreeID" js-tree="treeConfig" should-apply="applyModelChanges()" ng-model="treeData" tree="treeInstance"
+                         tree-events-obj="treeEventsObj"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="box" ng-show="optFlag == 'new' || optFlag == 'edit'">
+                <div class="box-header with-border">
+                    <h3 class="box-title">{{curDataset.name}}</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-12 form-horizontal">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group" ng-class="{'has-error': !(verify.dsName || curDataset.name.length)}">
+                                        <label class="col-sm-2 control-label">{{'CONFIG.DATASET.NAME'|translate}}</label>
+                                        <div class="col-sm-10">
+                                            <input id="DatasetName" ng-model="curDataset.name" class="form-control" placeholder="{{'CONFIG.DATASET.CATEGORY'|translate}}/{{'CONFIG.DATASET.NAME'|translate}}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">{{'CONFIG.DATASET.DATASOURCE'|translate}}</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" ng-model="datasource"
+                                                    ng-change="curWidget.query={}"
+                                                    ng-options="d as d.name+' ('+d.type+')' for d in datasourceList"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-repeat="alert in alerts">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div uib-alert ng-class="'alert-' + (alert.type || 'warning')"
+                                         close="alerts.splice($index, 1)">{{alert.msg}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" ng-show="datasource.name"
+                                     ng-include="datasource.type?('dashboard/getConfigView.do?type=' + datasource.type):''"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-2">
+                                            <button type="button" class="btn btn-block btn-success"
+                                                    ng-click="loadData()">{{'CONFIG.DATASET.LOAD_DATA'|translate}}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" ng-show="widgetData">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">
+                                            {{'CONFIG.COMMON.CUSTOM_EXPRESSION'|translate}}
+                                        </label>
+                                        <div class="col-sm-10">
+                                            <div class="input-group">
+                                                <div class="form-control"
+                                                     style="min-height: 38px;height: auto;padding: 0px">
+                                                    <div ng-repeat="o in curDataset.data.expressions" class="btn-group"
+                                                         style="margin: 3px 3px;">
+                                                        <button type="button" class="btn btn-default btn-sm"
+                                                                style="cursor: move;">
+                                                            {{o.alias?o.alias:o.exp}}
+                                                        </button>
+                                                        <button type="button"
+                                                                class="btn btn-default btn-sm dropdown-toggle"
+                                                                ng-click="editExp(o)">
+                                                            <span class="fa fa-edit"></span>
+                                                        </button>
+                                                        <button type="button"
+                                                                class="btn btn-default btn-sm dropdown-toggle"
+                                                                ng-click="curDataset.data.expressions.splice($index, 1)">
+                                                            <span class="fa fa-trash-o"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-info" ng-click="editExp()"
+                                                            style="min-height: 38px;">{{'CONFIG.DATASET.ADD'|translate}}
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" ng-show="widgetData">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">
+                                            {{'CONFIG.DATASET.REAL_TIME_INTERVAL'|translate}}
+                                        </label>
+                                        <div class="col-sm-10">
+                                            <input ng-model="curDataset.data.interval" class="form-control" placeholder="{{'CONFIG.DATASET.REAL_TIME_TIP'|translate}}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-danger pull-right">{{'COMMON.CANCEL'|translate}}</button>
+                    <button type="submit" ng-click="save()" class="btn btn-success pull-right"
+                            style="margin-right: 5px">{{'COMMON.SAVE'|translate}}
+                    </button>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="dataset_preview" style="height: 300px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-footer-->
+                <div class="overlay" ng-show="loading">
+                    <i class="fa fa-spinner fa-spin"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

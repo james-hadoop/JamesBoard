@@ -1,0 +1,178 @@
+{
+  "COMMON": {
+    "OK": "确认",
+    "CANCEL": "取消",
+    "SAVE": "保存",
+    "LOADING": "玩命加载中...",
+    "REFRESH": "刷新",
+    "EDIT": "编辑",
+    "CONFIRM_DELETE": "真的想好了要删除吗!!!",
+    "TIP": "提示",
+    "SUCCESS": "成功!",
+    "FAIL": "失败!",
+    "DEFAULT_CATEGORY": "默认分类",
+    "NOT_EMPTY": "不能为空!",
+    "NEW": "新建",
+    "COPY": "复制",
+    "DELETE": "删除"
+  },
+  "TIPS": {
+    "CAL_EXPR": "用于聚合后再计算. 使用上面的点击辅助输入避免输入错误! 如: Math.log(sum(columnA)/count(columB))"
+  },
+  "SIDEBAR": {
+    "C_DASHBOARD": "看板",
+    "MY_DASHBOARD": "我的看板",
+    "CONFIG": "配置",
+    "DATA_SOURCE": "数据源管理",
+    "CUBE": "数据集管理",
+    "WIDGET": "图表设计",
+    "DASHBOARD": "看板设计",
+    "DASHBOARD_CATEGORY": "看板分类",
+    "ADMIN": "管理",
+    "USER_ADMIN": "用户管理",
+    "RES_ADMIN": "资源管理"
+  },
+  "HEADER": {
+    "SIGN_OUT": "注销"
+  },
+  "DASHBOARD": {
+    "PARAM": {
+      "NAME": "面板查询参数",
+      "FIND": "查找",
+      "OPT_VALUE": "值列表",
+      "VALUE_LIST": "选定值列",
+      "VALUE": "选定值",
+      "VALUE_A": "下限",
+      "VALUE_B": "上限"
+    }
+  },
+  "CONFIG": {
+    "COMMON": {
+      "CUSTOM_EXPRESSION": "自定义表达式"
+    },
+    "DATA_SOURCE": {
+      "DATA_SOURCE_HEADER": "数据源",
+      "DATA_PROVIDER": "数据源类型",
+      "NAME": "新建数据源名称",
+      "TEST": "测试"
+    },
+    "WIDGET": {
+      "WIDGET": "图表",
+      "DATA_SOURCE": "数据源类型",
+      "DATASET": "新建数据源名称",
+      "LOAD_DATA": "读取数据",
+      "WIDGET_NAME": "图表名",
+      "AXIS_NAME": "轴名",
+      "CATEGORY": "图表分类",
+      "WIDGET_TYPE": "图表类型",
+      "CANCEL": "取消",
+      "SAVE": "保存",
+      "PREVIEW": "预览",
+      "EXIST_QUERY": "已有查询",
+      "NEW_QUERY": "新建查询",
+      "SWITCH": "切换",
+      "ROW": "行",
+      "GROUP": "列",
+      "VALUE": "值",
+      "VALUE_AXIS": "值轴",
+      "FILTER": "过滤",
+      "LABEL": "文字",
+      "FORMATTER": "格式化",
+      "STYLE": "样式",
+      "CHART": "图形",
+      "ADD_NEW_AXIS": "添加轴",
+      "ADD": "添加",
+      "OPTIONAL": "可选",
+      "ALIAS": "别名",
+      "MORE": "更多",
+      "EXAMPLE": "如",
+      "FUNNEL": "漏斗图",
+      "SANKEY": "桑基图",
+      "TABLE": "表格",
+      "KPI": "KPI",
+      "PIE": "饼图",
+      "LINE_BAR": "折线/柱状图",
+      "MAP": "中国地图",
+      "LINE": "折线",
+      "BAR": "柱状",
+      "STACKED_BAR": "堆叠柱状",
+      "AQUA": "蓝色",
+      "RED": "红色",
+      "YELLOW": "黄色",
+      "GREEN": "绿色",
+      "EXPRESSION": "表达式",
+      "COLUMN": "字段",
+      "AGGREGATE": "聚合",
+      "EXPRESSION_TEXT": "表达式",
+      "CHECK": "校验",
+      "FIND": "查找",
+      "EQUAL": "等于",
+      "NOT_EQUAL": "不等于",
+      "HORIZONTAL": "垂直",
+      "VERTICAL": "水平",
+      "RADAR": "雷达图",
+      "SHOW_BY_FILTER": "根据已有条件过滤",
+      "TIPS_ROW_DIM": "行维",
+      "TIPS_COLUMN_DIM": "列维",
+      "TIPS_MEASURE": "值",
+      "TIPS_DIM_NUM_0": "0",
+      "TIPS_DIM_NUM_1": "1",
+      "TIPS_DIM_NUM_0_MORE": "0个或多个",
+      "TIPS_DIM_NUM_1_MORE": "1个或多个",
+      "FROM_CACHE": "从缓存加载"
+    },
+    "DASHBOARD": {
+      "DASHBOARD": "看板",
+      "MY_DASHBOARD": "我的看板",
+      "CATEGORY": "分类",
+      "NAME": "名称",
+      "ADD_ROW": "添加行",
+      "ADD_COLUMN": "添加列",
+      "ROW": "行",
+      "HEIGHT": "行高度(像素)",
+      "WIDTH": "宽度",
+      "WIDGET": "图表",
+      "PREVIEW": "预览",
+      "ADD_PARAMROW": "添加参数行",
+      "ADD_PARAM": "添加参数",
+      "PARAM_ROW": "参数行",
+      "PARAM": "查询参数",
+      "PARAM_NAME": "参数名称",
+      "CUBE_TREE": "看板中的数据集/查询",
+      "LINKED_COLUMN": "参数关联上的列"
+    },
+    "CATEGORY": {
+      "NAME": "看板分类名称",
+      "CATEGORY": "分类"
+    },
+    "DATASET": {
+      "DATASET": "Cube",
+      "NAME": "名称",
+      "CATEGORY": "分类",
+      "LOAD_DATA": "读取数据",
+      "DATASOURCE": "数据源",
+      "ADD": "添加",
+      "REAL_TIME_INTERVAL": "实时间隔(秒)",
+      "REAL_TIME_TIP": "留空则不做后台刷新"
+    }
+  },
+  "ADMIN": {
+    "USER": {
+      "USER": "用户管理",
+      "LOGIN_NAME": "账号",
+      "NAME": "姓名",
+      "PASSWORD": "密码"
+    },
+    "ROLE": {
+      "ROLE": "角色管理",
+      "ROLE_NAME": "角色名",
+      "ADMIN": "管理员"
+    },
+    "BOARD": "看板",
+    "MENU": "菜单",
+    "DATASOURCE": "数据源",
+    "DATASET": "数据集",
+    "WIDGET": "图表",
+    "CONTACT_ADMIN": "请联系管理员申请以下权限"
+  }
+}
