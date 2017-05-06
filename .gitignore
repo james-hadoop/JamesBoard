@@ -6,6 +6,8 @@ target/
 *.iml
 
 # Eclipse #
+.settings/
+.project
 .metadata/
 .classpath
 Servers/
