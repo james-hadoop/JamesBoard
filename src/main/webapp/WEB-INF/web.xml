@@ -71,6 +71,6 @@
     </session-config>
 
     <welcome-file-list>
-        <welcome-file>/jamesstarter.html</welcome-file>
+        <welcome-file>/starter.html</welcome-file>
     </welcome-file-list>
 </web-app>

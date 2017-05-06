@@ -57,6 +57,12 @@
       "NAME": "Data Source Name",
       "TEST": "Test"
     },
+        "JAMES_CONFIG": {
+      "JAMES_CONFIG_HEADER": "James Config",
+      "JAMES_CONFIG_PROVIDER": "James Config Type",
+      "NAME": "James Config Name",
+      "TEST": "Test"
+    },
     "WIDGET": {
       "WIDGET": "Widget",
       "DATA_SOURCE": "Data Source",
