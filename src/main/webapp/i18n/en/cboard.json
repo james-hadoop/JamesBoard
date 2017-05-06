@@ -24,6 +24,7 @@
     "MY_DASHBOARD": "My DashBoard",
     "CONFIG": "Configuration",
     "DATA_SOURCE": "DataSource",
+    "JAMES_CONFIG": "JamesConfig",
     "CUBE": "Cube",
     "WIDGET": "Widget",
     "DASHBOARD": "Dashboard",
