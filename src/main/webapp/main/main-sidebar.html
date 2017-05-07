@@ -1,0 +1,63 @@
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+
+ <!-- Sidebar user panel (optional) -->
+ <div class="user-panel">
+  <div class="pull-left image">
+   <img src="{{user.avatar}}" class="img-circle" alt="User Image">
+  </div>
+  <div class="pull-left info">
+   <p>{{user.username}}</p>
+  </div>
+ </div>
+ <!-- Module -->
+ <ul class="sidebar-menu">
+  <li class="header">Module</li>
+  <!-- PORTAL -->
+  <li class="treeview" ui-sref-active="active"><a> <i class="fa fa-trophy"></i> <span>{{'SIDEBAR.PORTAL'|translate}}</span>
+    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+  </a>
+   <ul class="treeview-menu">
+    <li ui-sref-active="active" ng-repeat="b in boardList | filter:{userId:user.userId}"><a
+     ui-sref="mine.view({id:b.id})"><i class="fa fa-dashboard"></i>{{b.name}}</a></li>
+   </ul></li>
+
+  <!-- BI_REPORT -->
+  <li class="treeview" ui-sref-active="active"><a> <i class="fa fa-line-chart"></i> <span>{{'SIDEBAR.BI_REPORT'|translate}}</span>
+    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+  </a>
+   <ul class="treeview-menu">
+    <li ui-sref-active="active" ng-repeat="b in boardList | filter:{userId:user.userId}"><a
+     ui-sref="mine.view({id:b.id})"><i class="fa fa-dashboard"></i>{{b.name}}</a></li>
+   </ul></li>
+
+  <!-- MONITOR -->
+  <li class="treeview" ui-sref-active="active"><a> <i class="fa fa-eye"></i> <span>{{'SIDEBAR.MONITOR'|translate}}</span>
+    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+  </a>
+   <ul class="treeview-menu">
+    <li ui-sref-active="active" ng-repeat="b in boardList | filter:{userId:user.userId}"><a
+     ui-sref="mine.view({id:b.id})"><i class="fa fa-dashboard"></i>{{b.name}}</a></li>
+   </ul></li>
+
+  <!-- HIVE -->
+  <li class="treeview" ui-sref-active="active"><a> <i class="fa fa-sort-alpha-asc"></i> <span>{{'SIDEBAR.HIVE'|translate}}</span>
+    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+  </a>
+   <ul class="treeview-menu">
+    <li ui-sref-active="active" ng-repeat="b in boardList | filter:{userId:user.userId}"><a
+     ui-sref="mine.view({id:b.id})"><i class="fa fa-dashboard"></i>{{b.name}}</a></li>
+   </ul></li>
+
+  <!-- FUNCTION -->
+  <li class="treeview" ui-sref-active="active"><a> <i class="fa fa-paper-plane"></i> <span>{{'SIDEBAR.FUNCTION'|translate}}</span>
+    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+  </a>
+   <ul class="treeview-menu">
+    <li ui-sref-active="active" ng-repeat="b in boardList | filter:{userId:user.userId}"><a
+     ui-sref="mine.view({id:b.id})"><i class="fa fa-dashboard"></i>{{b.name}}</a></li>
+   </ul></li>
+ </ul>
+ <!-- /Module -->
+</section>
+<!-- /.sidebar -->
