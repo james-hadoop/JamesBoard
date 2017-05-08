@@ -75,6 +75,18 @@ angular.module('cBoard').config(['$stateProvider', function ($stateProvider) {
             url: '/user',
             templateUrl: 'org/cboard/view/admin/user.html',
             controller: 'userAdminCtrl'
+        }).state('portal', {
+            url: '/portal',
+            abstract: true,
+            template: '<div ui-view></div>'
+        }).state('portal.introduction', {
+            url: '/introduction',
+            templateUrl: 'org/cboard/view/portal/introduction.html',
+            controller: 'introductionCtrl'
+        }).state('portal.skill', {
+            url: '/skill',
+            templateUrl: 'org/cboard/view/portal/skill.html',
+            controller: 'skillCtrl'
         });
 
 }]);

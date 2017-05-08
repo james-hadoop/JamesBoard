@@ -13,13 +13,26 @@
  <!-- Module -->
  <ul class="sidebar-menu">
   <li class="header">Module</li>
-  <!-- PORTAL -->
-  <li class="treeview" ui-sref-active="active"><a> <i class="fa fa-trophy"></i> <span>{{'SIDEBAR.PORTAL'|translate}}</span>
-    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+
+  <!-- Admin -->
+  <li class="treeview" ui-sref-active="active" ng-if="isShowMenu('admin')"><a> <i class="fa fa-cog"></i> <span>{{'SIDEBAR.ADMIN'|translate}}</span>
+    <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i>
+   </span>
   </a>
    <ul class="treeview-menu">
-    <li ui-sref-active="active" ng-repeat="b in boardList | filter:{userId:user.userId}"><a
-     ui-sref="mine.view({id:b.id})"><i class="fa fa-dashboard"></i>{{b.name}}</a></li>
+    <li ui-sref-active="active" ng-if="isShowMenu('admin.user')"><a ui-sref="admin.user"><i
+      class="fa fa-fw fa-user"></i>{{'SIDEBAR.USER_ADMIN'|translate}}</a></li>
+   </ul></li>
+
+
+  <!-- PORTAL -->
+  <li class="treeview" ui-sref-active="active" ng-if="isShowMenu('portal')"><a> <i class="fa fa-trophy"></i> <span>{{'SIDEBAR.PORTAL'|translate}}</span>
+    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i>
+    </span>
+  </a>
+   <ul class="treeview-menu">
+    <li ui-sref-active="active" ng-if="isShowMenu('portal.introduction')"><a ui-sref="portal.introduction"><i
+      class="fa fa-table"></i>{{'SIDEBAR.INTRODUCTION'|translate}}</a></li>
    </ul></li>
 
   <!-- BI_REPORT -->

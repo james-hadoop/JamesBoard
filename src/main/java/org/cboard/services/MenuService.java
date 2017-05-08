@@ -30,6 +30,9 @@ public class MenuService {
         menuList.add(new DashboardMenu(7, -1, "SIDEBAR.ADMIN", "admin"));
         menuList.add(new DashboardMenu(8, 7, "SIDEBAR.USER_ADMIN", "admin.user"));
         menuList.add(new DashboardMenu(9, 1, "SIDEBAR.JAMES_CONFIG", "config.JamesConfig"));
+        menuList.add(new DashboardMenu(10, -1, "SIDEBAR.PORTAL", "portal"));
+        menuList.add(new DashboardMenu(11, 10, "SIDEBAR.INTRODUCTION", "portal.introduction"));
+        menuList.add(new DashboardMenu(12, 10, "SIDEBAR.SKILL", "portal.skill"));
     }
 
     public List<DashboardMenu> getMenuList() {

@@ -36,7 +36,9 @@
 		"BI_REPORT": "BI Report",
 		"MONITOR": "Monitor",
 		"HIVE": "Hive",
-		"FUNCTION": "Function"
+		"FUNCTION": "Function",
+		"INTRODUCTION": "Introduction",
+		"SKILL": "Skill"
 	},
 	"HEADER": {
 		"SIGN_OUT": "SignOut"
