@@ -18,7 +18,7 @@
 --
 -- Table structure for table `dashboard_board`
 --
-
+use cboard;
 DROP TABLE IF EXISTS `dashboard_board`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -306,6 +306,8 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+
+use bi;
 -- Dump completed on 2017-05-08 22:41:47
 -- MySQL dump 10.13  Distrib 5.7.9, for linux-glibc2.5 (x86_64)
 --

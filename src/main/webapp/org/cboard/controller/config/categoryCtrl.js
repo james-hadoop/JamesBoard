@@ -1,7 +1,7 @@
 /**
  * Created by yfyuan on 2016/8/29.
  */
-cBoard.controller('categoryCtrl', function ($scope, $http, ModalUtils, $filter) {
+JamesBoard.controller('categoryCtrl', function ($scope, $http, ModalUtils, $filter) {
 
     var translate = $filter('translate');
     $scope.optFlag = 'none';

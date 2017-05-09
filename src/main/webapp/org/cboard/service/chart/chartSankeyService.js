@@ -2,7 +2,7 @@
  * Created by yfyuan on 2016/10/28.
  */
 'use strict';
-cBoard.service('chartSankeyService', function (dataService) {
+JamesBoard.service('chartSankeyService', function (dataService) {
 
     this.render = function (containerDom, option, scope) {
         return new CBoardEChartRender(containerDom, option).chart();

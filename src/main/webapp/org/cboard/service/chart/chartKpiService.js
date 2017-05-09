@@ -2,7 +2,7 @@
  * Created by yfyuan on 2016/10/28.
  */
 'use strict';
-cBoard.service('chartKpiService', function (dataService, $compile, $filter) {
+JamesBoard.service('chartKpiService', function (dataService, $compile, $filter) {
 
     var translate = $filter('translate');
 

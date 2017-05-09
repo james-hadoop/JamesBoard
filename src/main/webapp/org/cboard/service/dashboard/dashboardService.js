@@ -2,7 +2,7 @@
  * Created by yfyuan on 2016/8/5.
  */
 
-cBoard.service('dashboardService', function ($http) {
+JamesBoard.service('dashboardService', function ($http) {
 
     this.boardData;
 

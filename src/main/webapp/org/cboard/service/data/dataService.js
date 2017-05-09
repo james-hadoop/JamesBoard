@@ -2,7 +2,7 @@
  * Created by yfyuan on 2016/8/12.
  */
 'use strict';
-cBoard.service('dataService', function ($http, updateService) {
+JamesBoard.service('dataService', function ($http, updateService) {
 
     /**
      * Get raw data from server side.

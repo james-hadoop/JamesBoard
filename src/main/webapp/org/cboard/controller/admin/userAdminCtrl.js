@@ -1,7 +1,7 @@
 /**
  * Created by yfyuan on 2016/12/5.
  */
-cBoard.controller('userAdminCtrl', function ($scope, $http, ModalUtils, $filter) {
+JamesBoard.controller('userAdminCtrl', function ($scope, $http, ModalUtils, $filter) {
 
     var translate = $filter('translate');
     $scope.optFlag;

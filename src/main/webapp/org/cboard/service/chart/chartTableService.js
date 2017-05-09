@@ -2,7 +2,7 @@
  * Created by yfyuan on 2016/10/28.
  */
 'use strict';
-cBoard.service('chartTableService', function (dataService) {
+JamesBoard.service('chartTableService', function (dataService) {
 
     this.render = function (containerDom, option, scope) {
         var height;

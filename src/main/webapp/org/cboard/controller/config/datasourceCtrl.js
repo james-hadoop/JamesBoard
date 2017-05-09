@@ -1,7 +1,7 @@
 /**
  * Created by yfyuan on 2016/8/19.
  */
-cBoard.controller('datasourceCtrl', function ($scope, $http, ModalUtils, $uibModal, $filter) {
+JamesBoard.controller('datasourceCtrl', function ($scope, $http, ModalUtils, $uibModal, $filter) {
 
     var translate = $filter('translate');
     $scope.optFlag = 'none';

@@ -2,7 +2,7 @@
  * Created by yfyuan on 2016/8/26.
  */
 
-cBoard.service('ModalUtils', function ($uibModal, $filter) {
+JamesBoard.service('ModalUtils', function ($uibModal, $filter) {
 
     var translate = $filter('translate');
 

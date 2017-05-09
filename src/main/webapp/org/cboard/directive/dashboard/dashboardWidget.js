@@ -2,7 +2,7 @@
  * Created by yfyuan on 2016/8/8.
  */
 
-cBoard.directive('dashboardWidget', function ($compile, $templateCache, dataService, chartService) {
+JamesBoard.directive('dashboardWidget', function ($compile, $templateCache, dataService, chartService) {
 
     var renderEchart = function (scope, element, attrs) {
         var template = $templateCache.get("echartContent");

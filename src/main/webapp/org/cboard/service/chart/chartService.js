@@ -2,7 +2,7 @@
  * Created by yfyuan on 2016/10/28.
  */
 'use strict';
-cBoard.service('chartService', function (chartPieService, chartLineService, chartFunnelService,
+JamesBoard.service('chartService', function (chartPieService, chartLineService, chartFunnelService,
         chartSankeyService, chartTableService, chartKpiService, chartRadarService, chartMapService) {
 
         this.render = function (containerDom, chartData, chartConfig, optionFilter, scope) {

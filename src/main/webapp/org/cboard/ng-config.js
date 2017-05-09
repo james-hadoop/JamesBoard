@@ -3,7 +3,7 @@
  */
 
 
-angular.module('cBoard').config(['$stateProvider', function ($stateProvider) {
+angular.module('JamesBoard').config(['$stateProvider', function ($stateProvider) {
     $stateProvider
         .state('dashboard', {
             url: '/dashboard',
@@ -91,7 +91,7 @@ angular.module('cBoard').config(['$stateProvider', function ($stateProvider) {
 
 }]);
 
-angular.module('cBoard').factory('sessionHelper', ["$rootScope", function ($rootScope) {
+angular.module('JamesBoard').factory('sessionHelper', ["$rootScope", function ($rootScope) {
     var sessionHelper = {
         responseError: function (response) {
             if (response.status == -1) {
@@ -105,7 +105,7 @@ angular.module('cBoard').factory('sessionHelper', ["$rootScope", function ($root
 }]);
 
 
-angular.module('cBoard').config(function ($httpProvider) {
+angular.module('JamesBoard').config(function ($httpProvider) {
     $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
@@ -158,8 +158,8 @@ angular.module('cBoard').config(function ($httpProvider) {
 });
 
 
-angular.module('cBoard').config(function ($translateProvider, $translatePartialLoaderProvider) {
-    $translatePartialLoaderProvider.addPart('cboard');
+angular.module('JamesBoard').config(function ($translateProvider, $translatePartialLoaderProvider) {
+    $translatePartialLoaderProvider.addPart('JamesBoard');
     $translateProvider.useLoader('$translatePartialLoader', {
         urlTemplate: 'i18n/{lang}/{part}.json'
     });

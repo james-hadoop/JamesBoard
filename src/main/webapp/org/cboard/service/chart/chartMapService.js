@@ -1,7 +1,7 @@
 /**
  * Created by Fine on 2016/12/13.
  */
-cBoard.service('chartMapService', function (dataService) {
+JamesBoard.service('chartMapService', function (dataService) {
     this.render = function (containerDom, option, scope) {
         var height;
         scope ? height = scope.myheight - 20 : null;
