@@ -1,57 +1,33 @@
 <!-- Content Wrapper. Contains page content -->
 <div id="inner-container">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="box box-solid">
-                <div class="box-header with-border">
-                    <i class="fa fa-database"></i> <h3 class="box-title"> {{'CONFIG.DATA_SOURCE.DATA_SOURCE_HEADER'|translate}}</h3>
-                    <div class="box-tools pull-right">
-                        <i class="glyphicon glyphicon-plus toolbar-icon" ng-click="newDs()" title="{{'COMMON.NEW'|translate}}"></i>&nbsp;&nbsp;
-                    </div>
-                </div>
-                <div class="box-body no-padding">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li ng-repeat="o in datasourceList">
-                                    <a>
-                                        {{o.name}}
-                                        <span class="pull-right text-red">
-                                            <i class="fa fa-copy" style="cursor: pointer" ng-click="copyDs(o)" title="{{'COMMON.COPY'|translate}}"></i>&nbsp;
-                                            <i class="fa fa-edit" style="cursor: pointer" ng-click="editDs(o)" title="{{'COMMON.EDIT'|translate}}"></i>&nbsp;
-                                            <i class="fa fa-trash-o" style="cursor: pointer" ng-click="deleteDs(o)" title="{{'COMMON.DELETE'|translate}}"></i>
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    </form>
-                    <!-- /.box-body -->
-                    <div class="box-footer">
-                    </div>
-                    <!-- /.box-footer-->
-                </div>
-            </div>
-        </div>
-        <div class="col-md-9">
-            <div class="box" ng-show="optFlag == 'new' || optFlag == 'edit'">
-                <div class="box-header with-border">
-                    <h3 class="box-title">{{curDatasource.name}}</h3>
-                </div>
-                <div class="box-body">
-                    <div ng-show="optFlag == 'new'"
-                         ng-include="'org/cboard/view/config/datasource/new.html'"></div>
-                    <div ng-show="optFlag == 'edit'"
-                         ng-include="'org/cboard/view/config/datasource/edit.html'"></div>
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer">
-                </div>
-                <!-- /.box-footer-->
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-md-12">
+  <form name="myForm">
+    <fieldset>
+      <legend>Upload on form submit</legend>
+      Username:
+      <input type="text" name="userName" ng-model="username" size="31" required>
+      <i ng-show="myForm.userName.$error.required">*required</i>
+      <br>Photo:
+      <input type="file" ngf-select ng-model="picFile" name="file"    
+             accept="image/*" ngf-max-size="200MB" required
+             ngf-model-invalid="errorFile">
+      <i ng-show="myForm.file.$error.required">*required</i><br>
+      <i ng-show="myForm.file.$error.maxSize">File too large 
+          {{errorFile.size / 1000000|number:1}}MB: max 200M</i>
+      <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb"> <button ng-click="picFile = null" ng-show="picFile">Remove</button>
+      <br>
+      <button ng-disabled="!myForm.$valid" 
+              ng-click="uploadPic(picFile)">Submit</button>
+      <span class="progress" ng-show="picFile.progress >= 0">
+        <div style="width:{{picFile.progress}}%" 
+            ng-bind="picFile.progress + '%'"></div>
+      </span>
+      <span ng-show="picFile.result">Upload Successful</span>
+      <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+    </fieldset>
+    <br>
+  </form>
     </div>
-</div>
-
+  </div>
 </div>
