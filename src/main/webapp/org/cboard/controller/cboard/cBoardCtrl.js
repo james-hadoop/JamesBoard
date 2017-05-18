@@ -1,7 +1,7 @@
 /**
  * Created by yfyuan on 2016/7/19.
  */
-JamesBoard.controller('cBoardCtrl', function ($scope, $location, $http, $q, $filter, $uibModal, ModalUtils) {
+JamesBoard.controller('JamesBoard', function ($scope, $location, $http, $q, $filter, $uibModal, ModalUtils) {
 
     var translate = $filter('translate');
 
