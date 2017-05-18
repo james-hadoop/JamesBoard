@@ -86,7 +86,7 @@ angular.module('JamesBoard').config(['$stateProvider', function ($stateProvider)
         }).state('portal.skill', {
             url: '/skill',
             templateUrl: 'org/cboard/view/portal/skill.html',
-            controller: 'skillCtrl'
+            controller: 'ngEmoticonCtrl'
         });
 
 }]);

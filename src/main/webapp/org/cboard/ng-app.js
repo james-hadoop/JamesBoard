@@ -3,4 +3,4 @@
  */
 
 var JamesBoard = angular.module('JamesBoard', ['ui.router', 'angular-md5', 'dndLists',
-    'ui.bootstrap', 'ngSanitize', 'ui.select', 'pascalprecht.translate', 'ui.ace', 'ngJsTree','ngFileUpload']);
+    'ui.bootstrap', 'ngSanitize', 'ui.select', 'pascalprecht.translate', 'ui.ace', 'ngJsTree','ngFileUpload','ngEmbed']);
