@@ -42,7 +42,7 @@ JamesBoard.controller('ngEmoticonCtrl', ['$scope', function ($scope) {
 
     $scope.vimeo='Naviss credere!Orgia de germanus repressor, gratia rumor!Nunquam pugna axona.Cur orexis peregrinationes?Sunt abactores pugna gratis, germanus lamiaes.Cur lanista cantare?Est castus bromium, cesaris.Tabess velum, tanquam https://vimeo.com/92066734 germanus musa.Cur lacta prarere? :smile: Assimilant aegre ducunt ad magnum advena.Emeritis, fidelis menss interdum examinare de varius, lotus detrius.';
 
-    $scope.pdfText='http://localhost:8080/cboard/1.pdf';
+    $scope.pdfText='http://localhost:8080/cboard/pdf/1.pdf';
 
 
 
