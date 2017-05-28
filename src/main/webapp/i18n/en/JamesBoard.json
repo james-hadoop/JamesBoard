@@ -35,6 +35,7 @@
 		"PORTAL": "Portal",
 		"BI_REPORT": "BI Report",
 		"MONITOR": "Monitor",
+		"HADOOP": "Hadoop",
 		"HIVE": "Hive",
 		"FUNCTION": "Function",
 		"INTRODUCTION": "Introduction",

@@ -87,6 +87,14 @@ angular.module('JamesBoard').config(['$stateProvider', function ($stateProvider)
             url: '/skill',
             templateUrl: 'org/cboard/view/portal/skill.html',
             controller: 'ngEmoticonCtrl'
+        }).state('hadoop', {
+            url: '/hadoop',
+            abstract: true,
+            template: '<div ui-view></div>'
+        }).state('hadoop.hive', {
+            url: '/hive',
+            templateUrl: 'org/cboard/view/hadoop/hive.html',
+            controller: 'hiveCtrl'
         });
 
 }]);
@@ -112,8 +120,11 @@ angular.module('JamesBoard').config(function ($httpProvider) {
     // Override $http service's default transformRequest
     $httpProvider.defaults.transformRequest = [function (data) {
         /**
-         * The workhorse; converts an object to x-www-form-urlencoded serialization.
-         * @param {Object} obj
+         * The workhorse; converts an object to x-www-form-urlencoded
+         * serialization.
+         * 
+         * @param {Object}
+         *            obj
          * @return {String}
          */
         var param = function (obj) {

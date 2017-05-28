@@ -33,6 +33,8 @@ public class MenuService {
         menuList.add(new DashboardMenu(10, -1, "SIDEBAR.PORTAL", "portal"));
         menuList.add(new DashboardMenu(11, 10, "SIDEBAR.INTRODUCTION", "portal.introduction"));
         menuList.add(new DashboardMenu(12, 10, "SIDEBAR.SKILL", "portal.skill"));
+        menuList.add(new DashboardMenu(13, -1, "SIDEBAR.HADOOP", "hadoop"));
+        menuList.add(new DashboardMenu(14, 13, "SIDEBAR.HIVE", "hadoop.hive"));
     }
 
     public List<DashboardMenu> getMenuList() {

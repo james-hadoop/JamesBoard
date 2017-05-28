@@ -55,13 +55,13 @@
      ui-sref="mine.view({id:b.id})"><i class="fa fa-dashboard"></i>{{b.name}}</a></li>
    </ul></li>
 
-  <!-- HIVE -->
-  <li class="treeview" ui-sref-active="active"><a> <i class="fa fa-sort-alpha-asc"></i> <span>{{'SIDEBAR.HIVE'|translate}}</span>
+  <!-- HADOOP -->
+  <li class="treeview" ui-sref-active="active"><a> <i class="fa fa-sort-alpha-asc"></i> <span>{{'SIDEBAR.HADOOP'|translate}}</span>
     <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
   </a>
    <ul class="treeview-menu">
-    <li ui-sref-active="active" ng-repeat="b in boardList | filter:{userId:user.userId}"><a
-     ui-sref="mine.view({id:b.id})"><i class="fa fa-dashboard"></i>{{b.name}}</a></li>
+        <li ui-sref-active="active" ng-if="isShowMenu('hadoop.hive')"><a ui-sref="hadoop.hive"><i
+      class="fa fa-table"></i>{{'SIDEBAR.HIVE'|translate}}</a></li>
    </ul></li>
 
   <!-- FUNCTION -->
