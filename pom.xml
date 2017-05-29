@@ -18,6 +18,7 @@
   <elasticsearch.version>5.2.0</elasticsearch.version>
   <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
   <commons-lang3.version>3.4</commons-lang3.version>
+  <hive.version>2.1.0</hive.version>
  </properties>
  <dependencies>
   <dependency>
@@ -272,6 +273,38 @@
    <artifactId>json-lib</artifactId>
    <version>2.4</version>
    <classifier>jdk15</classifier>
+  </dependency>
+  
+  <dependency>
+   <groupId>org.apache.hive</groupId>
+   <artifactId>hive-jdbc</artifactId>
+   <version>${hive.version}</version>
+  </dependency>
+  <dependency>
+   <groupId>org.apache.hive</groupId>
+   <artifactId>hive-service</artifactId>
+   <version>${hive.version}</version>
+  </dependency>
+  <dependency>
+   <groupId>org.apache.hive</groupId>
+   <artifactId>hive-exec</artifactId>
+   <version>${hive.version}</version>
+   <exclusions>
+    <exclusion>
+     <artifactId>pentaho-aggdesigner-algorithm</artifactId>
+     <groupId>org.pentaho</groupId>
+    </exclusion>
+   </exclusions>
+  </dependency>
+  <dependency>
+   <groupId>org.apache.hive</groupId>
+   <artifactId>hive-common</artifactId>
+   <version>${hive.version}</version>
+  </dependency>
+  <dependency>
+   <groupId>org.apache.hive</groupId>
+   <artifactId>hive-metastore</artifactId>
+   <version>${hive.version}</version>
   </dependency>
 
  </dependencies>

@@ -15,6 +15,6 @@
   <select id="getAll" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from telenav.student
+    from bi.student
   </select>
 </mapper>
